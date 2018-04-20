@@ -1,3 +1,15 @@
 <p>
   about works!
 </p>
+<ul>
+ <li>
+Nom :{{info.nom}}
+</li>
+<li>
+   Email. {{info.email}}
+ </li>
+   <li>
+    Telephone :  {{info.tel}}
+ </li>
+ <div *ngFor="let c of comments"> {{c.message}} <span>{{c.data |date:'dd/MM/yyyy:HH:mm:ss'}}</span></div>
+</ul>
