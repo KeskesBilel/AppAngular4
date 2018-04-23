@@ -1,15 +1,38 @@
-<p>
-  about works!
-</p>
-<ul>
- <li>
-Nom :{{info.nom}}
-</li>
-<li>
-   Email. {{info.email}}
- </li>
-   <li>
-    Telephone :  {{info.tel}}
- </li>
- <div *ngFor="let c of comments"> {{c.message}} <span>{{c.data |date:'dd/MM/yyyy:HH:mm:ss'}}</span></div>
-</ul>
+<div class="container">
+<div class="panel panel-primary">
+<div class="panel-heading">About </div>
+<div class="panel-body">
+<div>
+ <h3>Infos : </h3>
+      <ul class="list-group">
+       <li class="list-group-item">
+      Nom :{{info.nom}}
+      </li>
+      <li class="list-group-item">
+         Email. {{info.email}}
+       </li>
+         <li class="list-group-item">
+          Telephone :  {{info.tel}}
+       </li>
+      </ul>
+      </div>
+<div class="form-group">
+<label class="control-label">Message : </label>
+<input type="text" [(ngModel)]="commentaire.message">
+<button (click)="OnAddCommt()">Ajouter Commenteur </button>
+</div>
+      <div>
+        <h2>commentaires :</h2>
+        <ul class="list-group" >
+          <li class="list-group-item"  *ngFor="let c of comments"> {{c.message}} 
+              <span>{{c.data |date:'dd/MM/yyyy:HH:mm:ss'}}</span>
+
+          </li>
+        </ul>
+      </div>
+        
+</div>  
+</div>
+</div>
+
+

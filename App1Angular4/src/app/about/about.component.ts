@@ -12,6 +12,7 @@ export class AboutComponent implements OnInit {
     tel : "02568"
   
 } 
+commentaire = {data:null,message:""}
 comments =[
     {
       data :new Date(),message:"aaa"
@@ -22,6 +23,12 @@ comments =[
     {
       data :new Date(),message:"aaa"  }
 ]
+
+OnAddCommt(){
+this.commentaire.data = new Date();
+this.comments.push(this.commentaire);
+this.commentaire={data:null,message:""}
+}
   constructor() { }
 
   ngOnInit() {
