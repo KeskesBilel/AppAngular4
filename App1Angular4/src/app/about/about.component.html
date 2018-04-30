@@ -16,11 +16,14 @@
        </li>
       </ul>
       </div>
+      <form #f="ngForm"  (ngSubmit)="OnAddCommt(f.value)">
 <div class="form-group">
 <label class="control-label">Message : </label>
-<input type="text" [(ngModel)]="commentaire.message">
-<button (click)="OnAddCommt()">Ajouter Commenteur </button>
+<input  name="message" ngModel type="text" >
+<!-- ajouter un properte angular -->
+<button type="submit" >Ajouter Commenteur </button>
 </div>
+</form>
       <div>
         <h2>commentaires :</h2>
         <ul class="list-group" >

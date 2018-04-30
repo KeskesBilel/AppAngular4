@@ -18,16 +18,16 @@ comments =[
       data :new Date(),message:"aaa"
     },
     {
-      data :new Date(),message:"aaa"
+      data :new Date(),message:"bbb"
  },
     {
-      data :new Date(),message:"aaa"  }
+      data :new Date(),message:"ccccc"  }
 ]
 
-OnAddCommt(){
-this.commentaire.data = new Date();
-this.comments.push(this.commentaire);
-this.commentaire={data:null,message:""}
+OnAddCommt(c){
+c.data = new Date();
+this.comments.push(c);
+
 }
   constructor() { }
 
